@@ -1,0 +1,272 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Agnes Cicilia - Portfolio</title>
+
+    <!-- CSS here -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/jquery.animatedheadline.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/scrollCue.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <style>
+      /* Primary Button Styling */
+      .btn-primary {
+          background-color: #263E66;
+          margin-left: 220px;
+      }
+      
+      /* Image Container Styling */
+      .portfolio-single__image-container {
+          position: relative;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          background-color: #f8f9fa;
+          max-width: 500px;
+          margin: 0 auto;
+      }
+      
+      .portfolio-single__image__img {
+          width: 100%;
+          height: auto;
+          display: block;
+          transition: transform 0.3s ease;
+          object-fit: contain;
+      }
+      
+      .portfolio-single__image:hover .portfolio-single__image__img {
+          transform: scale(1.02);
+      }
+      
+      /* Feature Section Styling */
+      .feature-section h6 {
+          font-weight: 600;
+          color: #263E66;
+          margin-top: 1rem;
+      }
+      
+      .feature-section ul {
+          padding-left: 1.5rem;
+      }
+      
+      .feature-section li {
+          margin-bottom: 0.5rem;
+      }
+      
+      /* Responsive Layout */
+      @media screen and (min-width: 768px) {
+          .portfolio-single__row {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 2rem;
+              align-items: flex-start;
+          }
+          
+          .portfolio-single__image-col {
+              flex: 0 0 calc(58.333% - 1rem);
+              max-width: calc(58.333% - 1rem);
+              display: flex;
+              justify-content: center;
+          }
+          
+          .portfolio-single__content-col {
+              flex: 0 0 calc(41.667% - 1rem);
+              max-width: calc(41.667% - 1rem);
+          }
+          
+          .sticky-image {
+              position: sticky;
+              top: 120px;
+              align-self: flex-start;
+              width: 100%;
+          }
+      }
+      
+      @media screen and (max-width: 767px) {
+          .btn-primary {
+              margin-left: 0;
+              width: 100%;
+          }
+          
+          .portfolio-single__image-col {
+              margin-bottom: 2rem;
+          }
+          
+          .portfolio-single__image-container {
+              margin: 0;
+              border-radius: 8px;
+              max-width: 100%;
+          }
+      }
+
+      @media screen and (min-width: 992px) {
+          .portfolio-single__image-container {
+              max-width: 400px;
+          }
+      }
+    </style>
+</head>
+<body>
+    <div class="mariam__wraper">
+        <!-- Loading Screen -->
+        <div class="loading text-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <!-- Menu Toggle Button -->
+        <button class="button-toggle" id="buttonToggle">
+            <span></span>
+        </button>
+
+        <!-- Header Section -->
+        <header class="header header--left">
+            <div class="header__container">
+                <div class="header__logo">
+                    <!-- Logo would go here -->
+                </div>
+
+                <nav class="header__nav">
+                    <div class="header__nav__cross">
+                        <i class="bi bi-x-lg"></i>
+                    </div>
+                    <ul class="nav">
+                        <li class="nav__item"><a class="nav__link active" aria-current="page" href="index.html#home">Home</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#about">About</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#portfolio">Portfolio</a></li>
+                     
+                    </ul>
+                </nav>
+
+                <div class="header__switch-mode">
+                    <div class="switch-mode">
+                        <button class="switch-mode__icon switch-mode--light" onclick="setTheme('light')" title="Light mode">
+                            <i class="bi bi-sun"></i>
+                        </button>
+                        <button class="switch-mode__icon switch-mode--dark" onclick="setTheme('dark')" title="Dark mode">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Portfolio Single Project Section -->
+            <section class="portfolio-single section">
+                <div class="container">
+                    <!-- Project Heading -->
+                    <div class="row" data-cues="fadeIn">
+                        <div class="col-12">
+                            <div class="heading">
+                                <div class="heading__shape"></div>
+                                <div class="heading__content">
+                                    <h2>Lost and Found Application</h2>
+                                    <p>Aplikasi Pelaporan Barang Hilang Kampus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Content -->
+                    <div class="row portfolio-single__row" data-cues="fadeIn">
+                        <!-- Project Image Column -->
+                        <div class="col-xl-7 col-lg-12 portfolio-single__image-col">
+                           <div class="portfolio-single__image sticky-image">
+                               <div class="portfolio-single__image-container">
+                                   <img class="portfolio-single__image__img img-fluid" 
+                                        src="assets/images/portfolio/lostandfound.jpeg" 
+                                        alt="Lost and Found Application Screenshot">
+                               </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Project Details Column -->
+                        <div class="col-xl-5 portfolio-single__content-col">
+                            <div class="portfolio-single__content">
+                                <!-- Project Description Card -->
+                                <div class="card card--light">
+                                    <h4>Mobile Application - Kotlin</h4>
+                                    <p>Aplikasi Lost & Found Kampus merupakan platform digital yang memudahkan mahasiswa dan staff dalam melaporkan serta menemukan barang hilang di lingkungan kampus. Sistem ini dikembangkan dengan arsitektur modern menggunakan REST API untuk memastikan kompatibilitas across platform.</p>
+                                    
+                                    <h5 class="mt-4">Fitur Utama:</h5>
+                                    <div class="feature-section">
+                                        <h6>Pelaporan Barang Hilang:</h6>
+                                        <ul>
+                                            <li>Upload lampiran file (foto barang/dokumen pendukung)</li>
+                                            <li>Input tanggal kehilangan dengan kalender interaktif</li>
+                                            <li>Deskripsi detail (kategori, ciri-ciri, lokasi terakhir)</li>
+                                            <li>Sistem tagging otomatis berdasarkan kategori barang</li>
+                                        </ul>
+                                        
+                                        <h6 class="mt-3">Pencarian Cerdas:</h6>
+                                        <ul>
+                                            <li>Filter berdasarkan tanggal, kategori, dan lokasi</li>
+                                            <li>Notifikasi real-time ketika ada barang yang match</li>
+                                            <li>History pencarian tersimpan</li>
+                                        </ul>
+                                    </div>
+                                    
+                                    <p class="mt-3">
+                                        Aplikasi ini dikembangkan menggunakan Kotlin untuk Android dengan arsitektur MVVM. Backend API dibangun dengan Node.js dan MongoDB untuk penyimpanan data yang fleksibel. Sistem ini telah membantu mengurangi 30% barang hilang yang tidak kembali dibanding sistem manual sebelumnya.
+                                    </p>
+                                </div>
+                                
+                                <!-- Project Details Card -->
+                                <div class="card card--light">
+                                    <h4>More Details</h4>
+                                    <ul class="portfolio-single__content__list">
+                                        <li>
+                                            <span>Kategori: </span>
+                                            <span>Aplikasi Mobile</span>
+                                        </li>
+                                        <li>
+                                            <span>Platform: </span>
+                                            <span>Android</span>
+                                        </li>
+                                        <li>
+                                            <span>Teknologi:</span>
+                                            <span>Kotlin, Retrofit, Firebase, REST API</span>
+                                        </li>
+                                       
+                                        <li>
+                                            <span>API: </span>
+                                            <span>Custom RESTful API dengan Node.js</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                                <!-- Back to Portfolio Button -->
+                                <a href="portfolio-page.html" class="btn btn-primary mt-3">All Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.animatedheadline.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>

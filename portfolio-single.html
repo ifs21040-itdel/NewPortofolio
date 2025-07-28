@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Agnes Cicilia - Portfolio</title>
+
+    <!-- CSS here -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/jquery.animatedheadline.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/scrollCue.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <style>
+      .btn-primary {
+          background-color: #263E66;
+          margin-left: 220px;
+      }
+      
+      /* Improved sticky image styles */
+      .portfolio-single__image-container {
+          position: relative;
+      }
+      
+      @media screen and (min-width: 768px) {
+          .portfolio-single__row {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 2rem;
+          }
+          
+          .portfolio-single__image-col {
+              flex: 0 0 calc(58.333% - 1rem);
+              max-width: calc(58.333% - 1rem);
+          }
+          
+          .portfolio-single__content-col {
+              flex: 0 0 calc(41.667% - 1rem);
+              max-width: calc(41.667% - 1rem);
+          }
+          
+          .sticky-image {
+              position: sticky;
+              top: 100px;
+              align-self: flex-start;
+          }
+          
+          .portfolio-single__image {
+              margin-bottom: 0;
+          }
+      }
+      
+      @media screen and (max-width: 767px) {
+          .btn-primary {
+              margin-left: 0;
+              width: 100%;
+          }
+      }
+    </style>
+</head>
+<body>
+    <div class="mariam__wraper">
+        <!-- loading -->
+        <div class="loading text-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <!--menu toggle-->
+        <button class="button-toggle" id="buttonToggle">
+            <span></span>
+        </button>
+
+        <!--header-->
+        <header class="header header--left">
+            <div class="header__container">
+                <div class="header__logo">
+                </div>
+
+                <nav class="header__nav">
+                    <div class="header__nav__cross">
+                        <i class="bi bi-x-lg"></i>
+                    </div>
+                    <ul class="nav">
+                        <li class="nav__item"><a class="nav__link active" aria-current="page" href="index.html#home">Home</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#about">About</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#portfolio">Portfolio</a></li>
+                 
+                    </ul>
+                </nav>
+
+                <div class="header__switch-mode">
+                    <div class="switch-mode">
+                        <button class="switch-mode__icon switch-mode--light" onclick="setTheme('light')" title="Light mode">
+                            <i class="bi bi-sun"></i>
+                        </button>
+
+                        <button class="switch-mode__icon switch-mode--dark" onclick="setTheme('dark')" title="Dark mode">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!--Main-->
+        <main class="main">
+
+            <!-- Portfolio-single -->
+            <section class="portfolio-single section">
+                <div class="container">
+
+                    <!-- heading -->
+                    <div class="row" data-cues="fadeIn">
+                        <div class="col-12">
+                            <div class="heading">
+                                <div class="heading__shape"></div>
+                                <div class="heading__content">
+                                    <h2>FRK & FED Website</h2>
+                                    <p>Form Rencana Kerja dan Form Evaluasi Diri Website</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row portfolio-single__row" data-cues="fadeIn">
+                        <div class="col-xl-7 col-lg-12 portfolio-single__image-col">
+                           <div class="portfolio-single__image sticky-image">
+                                 <img class="portfolio-single__image__img img-fluid" src="assets/images/portfolio/frk-fed.jpeg" alt="FRK FED Project" />
+                            </div>
+                        </div>
+                        <div class="col-xl-5 portfolio-single__content-col">
+                            <div class="portfolio-single__content">
+                                <div class="card card--light">
+                                    <h4>Website - Laravel</h4>
+                                    <p>Formulir Rencana Kerja & Evaluasi Diri (FRK & FED) merupakan pengembangan aplikasi berbasis web untuk membantu dosen di Institut Teknologi Del dalam melaporkan rencana kerja dan evaluasi selama satu semester. Melalui pelaporan rencana kerja dan evaluasi ini, diharapkan juga tercapainya Tri Dharma Perguruan Tinggi, yaitu penyelenggaraan pendidikan, penelitian, pengabdian, dan dukungan.
+                                    </p>
+                                    <p>
+                                        Pengembangan ini dilakukan dalam bentuk tim yang beranggotakan 21 orang. Setiap anggota memiliki perannya masing-masing. Partisipasi saya meliputi pekerjaan front-end, desain menggunakan Figma, serta pengujian manual dan otomatis.
+                                    </p>
+                                </div>
+                                <div class="card card--light">
+                                    <h4>More Details</h4>
+                                    <ul class="portfolio-single__content__list">
+                                        <li>
+                                            <span>Category: </span>
+                                            <span>Website </span>
+                                        </li>
+                                        <li>
+                                            <span>URL: </span>
+                                            <span><a href="https://github.com/boysitorus/FrontEnd-FRK" target="_blank">https://github.com/boysitorus/FrontEnd-FRK</a></span>
+                                        </li>
+                                        <li>
+                                            <span>Technologies:</span>
+                                            <span>Visual Studio Code, Figma, Katalon</span>
+                                        </li>
+                                        <li>
+                                            <span>Duration: </span>
+                                            <span>4 months</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Back to Portfolio Button -->
+                                <a href="portfolio-page.html" class="btn btn-primary mt-3">All Project</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- JS here -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/jquery.animatedheadline.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="assets/js/index.js"></script>
+
+</body>
+</html>

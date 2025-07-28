@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agnes Cicilia - Portfolio</title>
+
+    <!-- CSS Links -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/css/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="assets/css/jquery.animatedheadline.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
+    <link href="assets/css/scrollCue.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========== Global Styles ========== */
+        .btn-primary {
+            background-color: #263E66;
+            margin-left: 220px;
+        }
+        
+        /* ========== Portfolio Image Styles ========== */
+        .portfolio-single__image-container {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            background-color: #f8f9fa;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .portfolio-single__image__img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease;
+            object-fit: contain;
+        }
+        
+        .portfolio-single__image:hover .portfolio-single__image__img {
+            transform: scale(1.02);
+        }
+        
+        /* ========== Feature Section Styles ========== */
+        .feature-section h6 {
+            font-weight: 600;
+            color: #263E66;
+            margin-top: 1rem;
+        }
+        
+        .feature-section ul {
+            padding-left: 1.5rem;
+        }
+        
+        .feature-section li {
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        
+        /* ========== Responsive Layout ========== */
+        @media screen and (min-width: 768px) {
+            .portfolio-single__row {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2rem;
+                align-items: flex-start;
+            }
+            
+            .portfolio-single__image-col {
+                flex: 0 0 calc(58.333% - 1rem);
+                max-width: calc(58.333% - 1rem);
+                display: flex;
+                justify-content: center;
+            }
+            
+            .portfolio-single__content-col {
+                flex: 0 0 calc(41.667% - 1rem);
+                max-width: calc(41.667% - 1rem);
+            }
+            
+            .sticky-image {
+                position: sticky;
+                top: 120px;
+                align-self: flex-start;
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 767px) {
+            .btn-primary {
+                margin-left: 0;
+                width: 100%;
+            }
+            
+            .portfolio-single__image-col {
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .portfolio-single__image-container {
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="mariam__wraper">
+        <!-- Loading Indicator -->
+        <div class="loading text-center">
+            <div class="spinner-border" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Toggle -->
+        <button class="button-toggle" id="buttonToggle" aria-label="Toggle navigation">
+            <span></span>
+        </button>
+
+        <!-- Main Header -->
+        <header class="header header--left">
+            <div class="header__container">
+                <div class="header__logo" aria-hidden="true">
+                    <!-- Logo placeholder -->
+                </div>
+
+                <nav class="header__nav" aria-label="Main navigation">
+                    <div class="header__nav__cross">
+                        <i class="bi bi-x-lg"></i>
+                    </div>
+                    <ul class="nav">
+                        <li class="nav__item"><a class="nav__link active" href="index.html#home">Home</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#about">About</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index.html#portfolio">Portfolio</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header__switch-mode">
+                    <div class="switch-mode">
+                        <button class="switch-mode__icon switch-mode--light" onclick="setTheme('light')" title="Light mode" aria-label="Switch to light mode">
+                            <i class="bi bi-sun"></i>
+                        </button>
+                        <button class="switch-mode__icon switch-mode--dark" onclick="setTheme('dark')" title="Dark mode" aria-label="Switch to dark mode">
+                            <i class="bi bi-moon-fill"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Area -->
+        <main class="main">
+            <!-- Portfolio Project Section -->
+            <section class="portfolio-single section" aria-labelledby="project-title">
+                <div class="container">
+                    <!-- Project Header -->
+                    <div class="row" data-cues="fadeIn">
+                        <div class="col-12">
+                            <div class="heading">
+                                <div class="heading__shape"></div>
+                                <div class="heading__content">
+                                    <h1 id="project-title">Redesign Website Institut Teknologi Del</h1>
+                                    <p class="lead">Modernisasi Portal Digital Kampus Berbasis User Experience</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Content Grid -->
+                    <div class="row portfolio-single__row" data-cues="fadeIn">
+                        <!-- Project Visuals -->
+                        <div class="col-xl-7 col-lg-12 portfolio-single__image-col">
+                           <figure class="portfolio-single__image sticky-image">
+                               <div class="portfolio-single__image-container">
+                                   <img class="portfolio-single__image__img img-fluid" 
+                                        src="assets/images/portfolio/del.jpeg" 
+                                        alt="Screenshot of redesigned IT Del website interface showing modern layout and navigation">
+                               </div>
+                              
+                            </figure>
+                        </div>
+                        
+                        <!-- Project Details -->
+                        <div class="col-xl-5 portfolio-single__content-col">
+                            <div class="portfolio-single__content">
+                                <!-- Project Overview -->
+                                <article class="card card--light">
+                                    <h2>Website Institute Teknologi Redesign - Figma</h2>
+                                    <p>Redesign website resmi Institut Teknologi Del ini bertujuan menciptakan pengalaman digital yang lebih baik bagi mahasiswa, calon mahasiswa, dan stakeholder kampus.</p>
+                                    
+                                    <h4 class="mt-4">Fokus Utama:</h4>
+                                    <div class="feature-section">
+                                        <section>
+                                            <h5>Penyegaran Visual:</h5>
+                                            <ul>
+                                                <li>Desain antarmuka modern dengan tetap mempertahankan identitas institusi</li>
+                                                <li>Sistem warna baru yang lebih accessible</li>
+                                                <li>Tipografi yang lebih readable</li>
+                                                <li>Penggunaan visual dan ikon yang konsisten</li>
+                                            </ul>
+                                        </section>
+                                        
+                                        <section class="mt-3">
+                                            <h5>Peningkatan UX:</h5>
+                                            <ul>
+                                                <li>Restrukturisasi menu navigasi yang lebih intuitif</li>
+                                                <li>Sistem pencarian terpadu</li>
+                                                <li>Penyederhanaan alur pendaftaran online</li>
+                                                <li>Optimasi untuk perangkat mobile</li>
+                                            </ul>
+                                        </section>
+
+                                        <section class="mt-3">
+                                            <h5>Konten Terstruktur:</h5>
+                                            <ul>
+                                                <li>Kategorisasi informasi yang lebih jelas (akademik, kemahasiswaan, penelitian)</li>
+                                                <li>Sistem pengumuman yang terintegrasi</li>
+                                                <li>Portal berita kampus yang dinamis</li>
+                                            </ul>
+                                        </section>
+                                    </div>
+                                    
+                                    <p class="mt-3">
+                                        Sebagai bagian dari tim desain, saya bertanggung jawab dalam menciptakan wireframe, mockup, dan melakukan usability testing untuk memastikan pengalaman pengguna yang optimal.
+                                    </p>
+                                </article>
+                                
+                                <!-- Project Specifications -->
+                                <article class="card card--light">
+                                    <h3>More Details</h3>
+                                    <dl class="portfolio-single__content__list">
+                                        <div>
+                                            <dt>Kategori:</dt>
+                                            <dd>Website Redesign</dd>
+                                        </div>
+                                        <div>
+                                            <dt>Teknologi:</dt>
+                                            <dd>Figma</dd>
+                                        </div>
+                                      
+                                        <div>
+                                            <dt>Metodologi:</dt>
+                                            <dd>Design Thinking & User Experience</dd>
+                                        </div>
+                                    </dl>
+                                </article>
+                                
+                                <!-- Navigation Button -->
+                                <nav>
+                                    <a href="portfolio-page.html" class="btn btn-primary mt-3">All Project</a>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery.min.js" defer></script>
+    <script src="assets/js/bootstrap.bundle.min.js" defer></script>
+    <script src="assets/js/jquery.animatedheadline.min.js" defer></script>
+    <script src="assets/js/jquery.magnific-popup.min.js" defer></script>
+    <script src="assets/js/swiper-bundle.min.js" defer></script>
+    <script src="assets/js/scrollCue.min.js" defer></script>
+    <script src="assets/js/index.js" defer></script>
+</body>
+</html>

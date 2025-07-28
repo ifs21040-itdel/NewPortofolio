@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en">
+  
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Agnes Cicilia - Personal Portfolio</title>
+
+    <!-- CSS here -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="assets/css/font/bootstrap-icons.css" rel="stylesheet" >
+    <link href="assets/css/jquery.animatedheadline.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet" >
+    <link href="assets/css/scrollCue.css" rel="stylesheet" >
+    <link href="assets/css/style.css" rel="stylesheet" >
+
+     <!-- Fonts -->
+     <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&amp;display=swap" rel="stylesheet">
+
+     <style>
+      .portfolio-item__image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+      }
+
+      .portfolio-item__image__img {
+          width: 100%;
+          height: auto;
+          max-height: 200px; 
+          object-fit: cover; 
+      }
+  </style>
+
+  </head>
+  <body>
+    <div class="mariam__wraper">
+        <!-- loading -->
+        <div class="loading text-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Loading...</span>
+          </div>
+        </div>
+
+         <!--menu toggle-->
+          <button class="button-toggle" id="buttonToggle">
+            <span></span>
+        </button>
+
+          <!--header-->
+          <header class="header header--left">
+            <div class="header__container">
+                <div class="header__logo">
+                </div>
+
+                <nav class="header__nav">
+                    <div class="header__nav__cross">
+                      <i class="bi bi-x-lg"></i>
+                    </div>  
+                    <ul class="nav">
+                        <li class="nav__item"><a class="nav__link active" aria-current="page" href="index-2.html#home">Home</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index-2.html#about">about</a></li>
+                        <li class="nav__item"><a class="nav__link" href="index-2.html#portfolio">portfolio</a></li>
+                       
+                    </ul>      
+                </nav>
+
+                <div class="header__switch-mode">
+                    <div  class="switch-mode">
+                      <button class="switch-mode__icon switch-mode--light" onclick="setTheme('light')" title="Light mode">
+                        <i class="bi bi-sun"></i>
+                      </button>
+
+                      <button class="switch-mode__icon switch-mode--dark" onclick="setTheme('dark')" title="dark mode">
+                        <i class="bi bi-moon-fill"></i>
+                      </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+ 
+        <!--Main-->
+        <main class="main">
+
+          
+          <!-- Portfolio page -->
+          <section class="portfolio section section--light"  id="portfolio">
+            <div class="container">
+              
+             <!-- heading -->
+             <div class="row" data-cues="fadeIn">
+              <div class="col-12">
+                  <div class="heading">
+                  <div class="heading__shape"></div>
+                  <div class="heading__content">
+                    <h2 >My Portfolio</h2>
+                    <p>A Latest Creative Works in Design and Web .</p>
+                  </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="row  portfolio__items" data-cues="fadeIn">
+
+                <!-- portfolio-item 1 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image" >
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/kemenkomarves.jpg" alt="portfolio"/>
+
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/kemenkomarves.jpg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">Maritim Website, Marveshrdev, Marves Core Test Case</h5>
+                        <p class="portfolio-item__content__subtitle">Kementerian Koordinator Bidang Kemaritiman dan Investasi Internship</p>
+                      </div>
+                      <a class="btn-link" href="https://docs.google.com/spreadsheets/d/189hAydl_MNedy3-C-O-bMT-fXA1Gae5P/edit?usp=sharing&ouid=103966585855499656976&rtpof=true&sd=true">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 2 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image" >
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/mandirisekuritas.jpg" alt="portfolio"/>
+
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/mandirisekuritas.jpg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">Mandiri Sekuritas Website Scenario Test</h5>
+                        <p class="portfolio-item__content__subtitle">Technical Test for QA</p>
+                      </div>
+                      <a class="btn-link" href="https://docs.google.com/spreadsheets/d/1TOFuTVoclaN1f7WsIIFTPJlnrozp1-9Ud0sm2gcfC3M/edit?usp=sharing">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 3 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image" >
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/api testing.jpg" alt="portfolio"/>
+
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/api testing.jpg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">API Testing on Open Weather</h5>
+                        <p class="portfolio-item__content__subtitle">Project Automation Testing</p>
+                      </div>
+                      <a class="btn-link" href="https://www.postman.com/aviation-pilot-82519159/api-testing/collection/cdyfad8/final-proyek-at?action=share&creator=0">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 4 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image" >
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/maritimkatalon.jpg" alt="portfolio"/>
+
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/maritimkatalon.jpg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">Automation Testing Maritim Website Using Katalon</h5>
+                        <p class="portfolio-item__content__subtitle">Kementerian Koordinator Bidang Kemaritiman Dan Investasi Internship</p>
+                      </div>
+                      <a class="btn-link" href="https://github.com/ifs21040-itdel/Maritim-Website-Testing.git">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 4 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image" >
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/frk-fed.jpeg" alt="portfolio"/>
+
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/frk-fed.jpeg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">FRK & FED Website</h5>
+                        <p class="portfolio-item__content__subtitle">Website - Laravel</p>
+                      </div>
+                      <a class="btn-link" href="portfolio-single.html">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 5 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image">
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/spmb.jpeg" alt="portfolio"/>
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/spmb.jpeg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">SMPB Website</h5>
+                        <p class="portfolio-item__content__subtitle">Website - Laravel</p>
+                      </div>
+                      <a class="btn-link" href="portfolio-single2.html">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 6-->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image">
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/lostandfound.jpeg" alt="portfolio"/>
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/lostandfound.jpeg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">Lost and Found Application</h5>
+                        <p class="portfolio-item__content__subtitle">Application - Kotlin</p>
+                      </div>
+                      <a class="btn-link" href="portfolio-single3.html">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                 <!-- portfolio-item 7 -->
+                 <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image">
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/del.jpeg" alt="portfolio"/>
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/del.jpeg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">Del Website Redesign</h5>
+                        <p class="portfolio-item__content__subtitle">web design</p>
+                      </div>
+                      <a class="btn-link" href="portfolio-single4.html">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+                
+                
+              </div>
+            </div>
+  
+          </div>
+        </section>
+
+        </section>
+        
+        </main>
+    </div>
+  
+    <!-- JS here -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js" ></script>
+    <script src="assets/js/jquery.animatedheadline.min.js" ></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="assets/js/index.js" ></script>
+
+
+
+  </body>
+
+</html>

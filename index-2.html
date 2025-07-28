@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="en">
+  
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title> Agnes Cicilia - Personal Portfolio</title>
+
+    <!-- CSS here -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet" >
+    <link href="assets/css/font/bootstrap-icons.css" rel="stylesheet" >
+    <link href="assets/css/jquery.animatedheadline.css" rel="stylesheet">
+    <link href="assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet" >
+    <link href="assets/css/scrollCue.css" rel="stylesheet" >
+    <link href="assets/css/style.css" rel="stylesheet" >
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&amp;display=swap" rel="stylesheet">
+
+    <style>
+      .portfolio-item__image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          overflow: hidden;
+      }
+
+      .portfolio-item__image__img {
+          width: 100%;
+          height: auto;
+          max-height: 200px;
+          object-fit: cover;
+      }
+  </style>
+
+  </head>
+  <body>
+    <div class="mariam__wraper">
+      <!-- loading -->
+      <div class="loading text-center">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+         <!--menu toggle-->
+          <button class="button-toggle" id="buttonToggle">
+            <span></span>
+        </button>
+
+        <!--header-->
+        <header class="header header--left">
+            <div class="header__container">
+                <div class="header__logo">
+                  <!-- <a href="index-2.html"><img src="assets/images/logo.png" alt=""></a> -->
+                </div>
+
+                <nav class="header__nav">
+                    <div class="header__nav__cross">
+                      <i class="bi bi-x-lg"></i>
+                    </div>  
+                    <ul class="nav">
+                        <li class="nav__item"><a class="nav__link active" aria-current="page" href="#home">Home</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#about">About</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav__item"><a class="nav__link" href="#Blog">Blog</a></li>
+                    </ul>      
+                </nav>
+
+                <div class="header__switch-mode">
+                    <div  class="switch-mode">
+                      <button class="switch-mode__icon switch-mode--light" onclick="setTheme('light')" title="Light mode">
+                        <i class="bi bi-sun"></i>
+                      </button>
+
+                      <button class="switch-mode__icon switch-mode--dark" onclick="setTheme('dark')" title="dark mode">
+                        <i class="bi bi-moon-fill"></i>
+                      </button>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+ 
+        <!--Main-->
+        <main class="main">
+
+          <!-- Home section -->
+          <section class="home vh-100" style="background-image: url('assets/images/bg/bg-1.jpg')">
+              <div class="container" data-cues="fadeIn">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="home__content vh-100 " >
+                      <div class="home__social-media">
+                        <ul class="social-media ">
+                          <li class="social-media__item">
+                            <a href="#" class="social-media__link"><i class="bi bi-facebook"></i></a>
+                          </li>
+                          <li class="social-media__item">
+                            <a href="#" class="social-media__link"><i class="bi bi-twitter-x"></i></a>
+                          </li>  
+                          <li class="social-media__item">
+                            <a href="#" class="social-media__link"><i class="bi bi-instagram"></i></a>
+                          </li>  
+                          <li class="social-media__item">
+                            <a href="#" class="social-media__link"><i class="bi bi-dribbble"></i></a>
+                          </li>  
+                          <li class="social-media__item">
+                            <a href="#" class="social-media__link"><i class="bi bi-github"></i></a>
+                          </li>    
+                        </ul>
+  
+                      </div>
+
+                       <!-- banner -->
+                      <div class="home__banner">
+                        <div class="banner">
+                          <h6 class="banner__subtitle">Hi There,</h6>
+                          <h1 class="banner__title cd-headline clip">
+                              <span class="cd-words-wrapper">
+                                  <b class="is-visible"> QA Engineer</b>
+                                  <b>Manual Tester</b>
+                                  <b>Automation Tester</b>
+                              </span>
+                          </h1>
+                          <p class="banner__desc">
+                            Empower users through creativity, creating intuitive and engaging experiences with every interaction
+                          </p>
+                          <a href="#about" class="btn-default"> 
+                              <i class="bi bi-person-circle"></i>
+                              <span> More About Me</span>
+                          </a>
+                        </div>
+                      
+                      </div>
+
+                      <!-- info -->
+                      <div class="home__info">
+                        <div class="info">
+                          <div class="info__item">
+                            <p class="mb-0">Email:</p>
+                            <p class="mb-0">agnesmarbun2311@gmail.com</p>
+                        </div>
+                    
+                        <div class="info__item">
+                            <p class="mb-0">Phone:</p>
+                            <p class="mb-0">082272931303</p>
+                        </div>
+                    
+                        <div class="info__item">
+                            <p class="mb-0">Location:</p>
+                            <p class="mb-0">Medan, North Sumatera</p>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </section>
+
+          <!-- About section -->
+          <section class="about section section--white" id="about" >
+            <div class="container">
+              <!-- heading -->
+              <div class="row" data-cues="fadeIn">
+                <div class="col-12">
+                   <div class="heading" >
+                    <div class="heading__shape"></div>
+                    <div class="heading__content">
+                      <h2>About me</h2>
+                      <p>Main informations about me and what I love to do.</p>
+                    </div>
+                   </div>
+                </div>
+
+              </div>
+
+              <!-- profile+ details -->
+              <div class="row " data-cues="fadeIn">
+                <div class="col-xl-5 mb-24 ">
+                   <div class="profile card card--img ">
+                      <img src="assets/images/about/agnes.jpeg" alt="" class="profile__img">
+                   </div>
+                </div>
+                <div class="col-xl-7 ">
+                  <div class="details card card--light">
+                    <h3 class="details__title">Hello,<br>I'm Agnes Cicilia Marbun, </h3>
+                    <p class="details__desc">
+                      With years of experience in student leadership and hands-on projects in quality assurance and development, I’ve grown to love creating tech solutions that are both functional and user-friendly. I’m always eager to learn, collaborate, and bring fresh ideas to life
+                    </p>
+
+                    <ul class="details__list ">   
+                        <li><span>Phone :</span> 082272931303</li>
+                        <li><span>Email :</span><a href="mailto:agnesmarbun2311@gmail.com">agnesmarbun2311@gmail.com</a></li>
+                        <li><span>Nationality :</span> Indonesia</li>
+                        <li><span>Address :</span> Balige, Sumatera Utara</li>
+                        <li><span>LikedIn :</span> Agnes Cicilia Marbun</li>
+                    </ul>
+
+                    <div class="details__btn">
+                      <a href="assets/images/CV_Agnes Cicilia.pdf" class="btn-default" download>
+                        <i class="bi bi-cloud-arrow-down-fill"></i>
+                        <span>Download My CV</span>
+                      </a>
+                     
+                    </div>
+                   
+                </div>
+                </div>
+              </div>
+              <!-- Education & Experience -->
+              <div class="row" data-cues="fadeIn">
+                <!-- Education -->
+                <div class="col-lg-6">
+                  <div class="timeline card card--light">
+                    <div class="timeline__single">
+                      <h4 class="timeline__single__title"> Education </h4>
+
+                      <div class="timeline__item">
+                        <img src="assets/images/about/edu.png" alt="" class="timeline__item__img">
+                        <div class="timeline__item__content">
+                          <h6>Bachelor of Informatics Engineering</h6>
+                          <p><span>Del Institute of Technology</span></p>
+                          <div><span>August 2021 - 2025</span></div>
+                        </div>
+                      </div>
+
+                      <div class="timeline__item">
+                        <img src="assets/images/about/edu.png" alt="" class="timeline__item__img">
+                        <div class="timeline__item__content">
+                          <h6>Senior High School</h6>
+                          <p><span>Laguboti 1st Public Senior High School</span></p>
+                          <div><span>June 2018 - 2021</span></div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Experience -->
+                <div class="col-lg-6">
+                  <div class="timeline card card--light">
+                    <div class="timeline__single">
+                      <h4 class="timeline__single__title"> Experience</h4>
+
+                      <div class="timeline__item">
+                        <img src="assets/images/about/exp.png" alt="" class="timeline__item__img">
+                        <div class="timeline__item__content">
+                          <h6>Quality Assurance Internship</h6>
+                          <p><span>Kementerian Koordinator Bidang Kemaritiman dan Investasi</span></p>
+                          <div><span>June 2024 - August 2024</span></div>
+                        </div>
+                      </div>
+
+                      <div class="timeline__item">
+                        <img src="assets/images/about/exp.png" alt="" class="timeline__item__img">
+                        <div class="timeline__item__content">
+                          <h6>Front End Developer Internship</h6>
+                          <p><span>ZonaEbt</span></p>
+                          <div><span>June 2024 - August 2024</span></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+          </section>
+
+          <!-- Portfolio section -->
+          <section class="portfolio section section--white" id="portfolio">
+            <div class="container" >
+              <!-- heading -->
+              <div class="row" data-cues="fadeIn">
+                <div class="col-12">
+                    <div class="heading">
+                    <div class="heading__shape"></div>
+                    <div class="heading__content">
+                      <h2 >My Portfolio</h2>
+                    </div>
+                    </div>
+                </div>
+              </div>
+
+              <div class="row  portfolio__items" data-cues="fadeIn">
+
+                <!-- portfolio-item 1 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image" >
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/kemenkomarves.jpg" alt="portfolio"/>
+
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/kemenkomarves.jpg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">Maritim Website, Marveshrdev, Marves Core Test Case</h5>
+                        <p class="portfolio-item__content__subtitle">Kementerian Koordinator Bidang Kemaritiman dan Investasi Internship</p>
+                      </div>
+                      <a class="btn-link" href="https://docs.google.com/spreadsheets/d/189hAydl_MNedy3-C-O-bMT-fXA1Gae5P/edit?usp=sharing&ouid=103966585855499656976&rtpof=true&sd=true">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 2 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image" >
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/mandirisekuritas.jpg" alt="portfolio"/>
+
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/mandirisekuritas.jpg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">Mandiri Sekuritas Website Scenario Test</h5>
+                        <p class="portfolio-item__content__subtitle">Technical Test for QA</p>
+                      </div>
+                      <a class="btn-link" href="https://docs.google.com/spreadsheets/d/1TOFuTVoclaN1f7WsIIFTPJlnrozp1-9Ud0sm2gcfC3M/edit?usp=sharing">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 3 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image" >
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/api testing.jpg" alt="portfolio"/>
+
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/api testing.jpg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">API Testing on Open Weather</h5>
+                        <p class="portfolio-item__content__subtitle">Project Automation Testing</p>
+                      </div>
+                      <a class="btn-link" href="https://www.postman.com/aviation-pilot-82519159/api-testing/collection/cdyfad8/final-proyek-at?action=share&creator=0">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 4 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image" >
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/maritimkatalon.jpg" alt="portfolio"/>
+
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/maritimkatalon.jpg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">Automation Testing Maritim Website Using Katalon</h5>
+                        <p class="portfolio-item__content__subtitle">Kementerian Koordinator Bidang Kemaritiman Dan Investasi Internship</p>
+                      </div>
+                      <a class="btn-link" href="https://github.com/ifs21040-itdel/Maritim-Website-Testing.git">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 5 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image" >
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/frk-fed.jpeg" alt="portfolio"/>
+
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/frk-fed.jpeg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">FRK & FED Website</h5>
+                        <p class="portfolio-item__content__subtitle">Website - Laravel</p>
+                      </div>
+                      <a class="btn-link" href="portfolio-single.html">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 5 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image">
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/spmb.jpeg" alt="portfolio"/>
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/spmb.jpeg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">SMPB Website</h5>
+                        <p class="portfolio-item__content__subtitle">Website - Laravel</p>
+                      </div>
+                      <a class="btn-link" href="portfolio-single2.html">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                <!-- portfolio-item 6 -->
+                <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image">
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/lostandfound.jpeg" alt="portfolio"/>
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/lostandfound.jpeg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">Lost and Found Application</h5>
+                        <p class="portfolio-item__content__subtitle">Application - Kotlin</p>
+                      </div>
+                      <a class="btn-link" href="portfolio-single3.html">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+
+                 <!-- portfolio-item 7 -->
+                 <div class="col-xl-4 col-lg-6 col-md-6">
+                  <div class="portfolio-item card card--light">
+                    <div class="portfolio-item__image">
+                      <img class="portfolio-item__image__img" src="assets/images/portfolio/del.jpeg" alt="portfolio"/>
+                      <div class="portfolio-item__image__btn">
+                        <a href="assets/images/portfolio/del.jpeg" class="btn-view"> <i class="bi bi-plus"></i></a>
+                      </div>
+                    </div>
+
+                    <div class="portfolio-item__content">
+                      <div class="portfolio-item__content__info">
+                        <h5 class="portfolio-item__content__title">Del Website Redesign</h5>
+                        <p class="portfolio-item__content__subtitle">web design</p>
+                      </div>
+                      <a class="btn-link" href="portfolio-single4.html">
+                        <i class="bi bi-arrow-up-right-circle"></i>
+                      </a>
+                    </div>
+                   
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="section__readmore">
+                    For More Works Visit 
+                    <a href="portfolio-page.html" class="section__readmore__link">My Portfolio</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+        </main>
+    </div>
+  
+    <!-- JS here -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.bundle.min.js" ></script>
+    <script src="assets/js/jquery.animatedheadline.min.js" ></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/swiper-bundle.min.js"></script>
+    <script src="assets/js/scrollCue.min.js"></script>
+    <script src="assets/js/index.js" ></script>
+  </body>
+</html>
